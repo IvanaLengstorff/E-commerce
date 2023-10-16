@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  db:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: ecommerce
+      POSTGRES_USER: daniel
+      POSTGRES_PASSWORD: daniel
+    ports:
+      - "5433:5432"
+    restart: always
+    networks:
+      - si2-network
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    depends_on:
+      - db
+    environment:
+      PGADMIN_DEFAULT_EMAIL: daniel@admin.com
+      PGADMIN_DEFAULT_PASSWORD: daniel
+    hostname: pgadmin
+    ports:
+      - "5435:80"
+    restart: always
+    networks:
+      - si2-network
+
+  server:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: ecommerce
+    restart: always
+    working_dir: /var/www/html/
+    container_name: ecommerce
+    depends_on:
+      - db
+    hostname: ecommerce
+    ports:
+      - 8000:8000
+      - 5173:5173
+    volumes:
+      - ./:/var/www/html/:rw
+    networks:
+      - si2-network
+
+networks:
+  si2-network:
+    external: true

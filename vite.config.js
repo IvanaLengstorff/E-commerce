@@ -11,4 +11,8 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        // host: '0.0.0.0',
+        // port: 8000, // Puedes ajustar el puerto según sea necesario
+    },
 });
