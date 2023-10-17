@@ -268,6 +268,24 @@ return [
             'can' => 'cruds',
         ],
         [
+            'text' => 'Categorias',
+            'url'  => 'categories',
+            'icon' => 'fas fa-fw fa-users',
+            'can' => 'cruds',
+        ],
+        [
+            'text' => 'SubCategorias',
+            'url'  => 'subcategories',
+            'icon' => 'fas fa-fw fa-users',
+            'can' => 'cruds',
+        ],
+        [
+            'text' => 'Productos',
+            'url'  => 'products',
+            'icon' => 'fas fa-fw fa-users',
+            'can' => 'cruds',
+        ],
+        [
             'text'    => 'Gestion de negocio',
             'icon'    => 'fas fa-fw fa-share',
             'can' => 'cruds',

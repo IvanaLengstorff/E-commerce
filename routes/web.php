@@ -4,12 +4,20 @@ use App\Http\Controllers\BranchController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\BrandsController;
+<<<<<<< HEAD
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\WorkPositionController;
 use App\Http\Controllers\PaymentMethodController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserController;
+=======
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\WorkPositionController;
+use App\Http\Controllers\PaymentMethodController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SubcategoryController;
+>>>>>>> 1ff6a04d7ee5d6c8b88c2223ceff6380047e9c8a
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +44,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('users', UserController::class);
     Route::resource('employees', EmployeeController::class);
     Route::resource('branches', BranchController::class);
-
+    Route::resource('categories', CategoryController::class);
+    Route::resource('subcategories', SubcategoryController::class);
+    Route::resource('products', ProductController::class);
     Route::group(['prefix' => 'purchases'], function () {
         Route::get('/', [TransactionController::class, 'purchaseIndex'])
             ->name('purchases.index');
