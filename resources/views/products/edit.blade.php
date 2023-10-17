@@ -90,6 +90,19 @@
                     @enderror
                 </div>
 
+                <div class="form-group">
+                    <label for="imagen-preview">Vista previa de la Imagen</label>
+                    <img width="40%" id="imagen-preview" src="{{ asset($product->image_path) }}" alt="{{ $product->name }}" class="img-fluid">
+                </div>
+
+                <div class="form-group">
+                    <h5>Cambiar Imagen del Producto:</h5>
+                    <input type="file" name="imagen" id="imagen" class="form-control-file" required>
+                    @error('imagen')
+                        <small class="text-danger">La imagen es requerido</small>
+                    @enderror
+                </div>
+
                 <button type="submit" class="btn btn-primary">Actualizar</button>
             </form>
         </div>

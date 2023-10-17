@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('price',10,2);
             $table->decimal('cost_avg',10,2);
             $table->integer('stock');
+            $table->string('image_path')->nullable();
             $table->unsignedBigInteger('subcategory_id');
             $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('brand_id');

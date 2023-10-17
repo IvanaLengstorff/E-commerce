@@ -58,5 +58,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     });
 
     Route::get('bitacoras', [BitacoraController::class, 'index'])->name('bitacora.index');
-
 });
+
+Route::get('catalogos', [ProductController::class, 'catalogo'])->name('catalogo.index');

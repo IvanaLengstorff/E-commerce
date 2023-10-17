@@ -15,7 +15,7 @@
                     {{ session('success') }}
                 </div>
             @endif
-            <form method="POST" action="{{ route('products.store') }}">
+            <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="name">Name:</label>
@@ -60,8 +60,8 @@
                 <div class="form-group">
                     <h5>SubCategoria:</h5>
                     <select name = "subcategory_id" id="subcategory_id" class="form-control">
+                        <option value="">Seleccione una subcategoria</option>
                         @foreach ($subcategories as $subcategory)
-                            <option value="">Seleccione una subcategoria</option>
                             <option value="{{ $subcategory->id }}">
                                 {{ $subcategory->name }}
                             </option>
@@ -74,8 +74,8 @@
                 <div class="form-group">
                     <h5>Marcas:</h5>
                     <select name = "brand_id" id="brand_id" class="form-control">
+                        <option value="">Seleccione una marca</option>
                         @foreach ($brands as $brand)
-                            <option value="">Seleccione una marca</option>
                             <option value="{{ $brand->id }}">
                                 {{ $brand->name }}
                             </option>
@@ -83,6 +83,14 @@
                     </select>
                     @error('brand_id')
                         <small class="text-danger">La marca es requerido</small>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <h5>Imagen del Producto:</h5>
+                    <input type="file" name="imagen" id="imagen" class="form-control-file" required>
+                    @error('imagen')
+                        <small class="text-danger">La imagen es requerido</small>
                     @enderror
                 </div>
 

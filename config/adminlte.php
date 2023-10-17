@@ -335,6 +335,12 @@ return [
             'icon' => 'fas fa-fw fa-users',
             'can' => 'cruds',
         ],
+        [
+            'text' => 'Catalogo',
+            'url'  => 'catalogos',
+            'icon' => 'fas fa-fw fa-users',
+            'can' => 'cliente',
+        ],
     ],
 
     /*
