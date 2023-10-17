@@ -8,14 +8,14 @@
 
 @section('content')
     <div class="row">
-        @foreach ($productos as $producto)
+        @foreach ($products as $product)
             <div class="col-md-4">
                 <div class="card">
-                    <img src="{{ asset('img/' . $producto->imagen) }}" class="card-img-top" alt="{{ $producto->nombre }}">
+                    <img src="{{ asset($product->image_path) }}" class="card-img-top" alt="{{ $product->name }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $producto->nombre }}</h5>
-                        <p class="card-text">{{ $producto->descripcion }}</p>
-                        <p class="card-text">Precio: ${{ $producto->precio }}</p>
+                        <h5 class="card-title">{{ $product->name }}</h5>
+                        <p class="card-text">{{ $product->description }}</p>
+                        <p class="card-text">Precio: ${{ $product->price }}</p>
                         <a href="#" class="btn btn-primary">Añadir al carrito</a>
                     </div>
                 </div>
