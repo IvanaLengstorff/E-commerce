@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BitacoraController;
 use App\Http\Controllers\BranchController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -55,4 +56,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::get('show', [TransactionController::class, 'sellShow'])
             ->name('sells.show');
     });
+
+    Route::get('bitacoras', [BitacoraController::class, 'index'])->name('bitacora.index');
+
 });

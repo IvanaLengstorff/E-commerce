@@ -4,15 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Traits\BitacoraTrait;
 
-
-class Branches extends Model
+class Bitacora extends Model
 {
-    use HasFactory,BitacoraTrait;
-    protected $table = 'branches';
+    use HasFactory;
+
+    protected $table = 'bitacoras';
     
     protected $guarded = [
         'id',
     ];
+
+    public function User(){
+        return $this->belongsTo(User::class,'user_id');
+    }
 }

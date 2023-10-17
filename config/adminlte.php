@@ -329,6 +329,12 @@ return [
                 ],
             ],
         ],
+        [
+            'text' => 'Bitacora',
+            'url'  => 'bitacoras',
+            'icon' => 'fas fa-fw fa-users',
+            'can' => 'cruds',
+        ],
     ],
 
     /*
