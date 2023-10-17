@@ -259,14 +259,18 @@ return [
             'url'  => 'brands',
             'icon' => 'fas fa-fw fa-users',
             'can' => 'cruds',
-
         ],
         [
             'text' => 'Sucursales',
             'url'  => 'workPositions',
             'icon' => 'fas fa-fw fa-users',
             'can' => 'cruds',
-
+        ],
+        [
+            'text' => 'Metodos de Pago',
+            'url'  => 'paymentMethods',
+            'icon' => 'fas fa-fw fa-users',
+            'can' => 'cruds',
         ],
         [
             'text'    => 'Compras',

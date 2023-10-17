@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\BrandsController;
 use App\Http\Controllers\WorkPositionController;
+use App\Http\Controllers\PaymentMethodController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('brands', BrandsController::class);
 Route::resource('workPositions', WorkPositionController::class);
+Route::resource('paymentMethods', PaymentMethodController::class);
 
