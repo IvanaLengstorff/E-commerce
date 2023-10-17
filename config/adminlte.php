@@ -262,6 +262,13 @@ return [
 
         ],
         [
+            'text' => 'Sucursales',
+            'url'  => 'workPositions',
+            'icon' => 'fas fa-fw fa-users',
+            'can' => 'cruds',
+
+        ],
+        [
             'text'    => 'Compras',
             'icon'    => 'fas fa-fw fa-share',
             'can' => 'cruds',

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class WorkPosition extends Model
 {
     use HasFactory;
+    protected $table = 'work_positions';
+    
+    protected $fillable = [
+        'name',
+    ];
 }
