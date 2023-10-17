@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\BrandsController;
+use App\Http\Controllers\PaymentMethodController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +25,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('brands', BrandsController::class);
+Route::resource('paymentMethods', PaymentMethodController::class);
+
