@@ -29,7 +29,7 @@ class WorkPositionController extends Controller
             'name' => $request->input('name'),
         ]);
 
-        return redirect()->route('workPositions.index')->with('success', 'Sucursal creada exitosamente');
+        return redirect()->route('workPositions.index')->with('success', 'Cargo creado exitosamente');
     }
 
     public function edit($id)
@@ -49,7 +49,7 @@ class WorkPositionController extends Controller
         $workPosition->save();
 
         return redirect()->route('workPositions.index')
-            ->with('success', 'Sucursal actualizada exitosamente');
+            ->with('success', 'Cargo actualizada exitosamente');
     }
 
     public function destroy($id)
@@ -59,10 +59,10 @@ class WorkPositionController extends Controller
         if ($workPosition) {
             $workPosition->delete();
             return redirect()->route('workPositions.index')
-                ->with('success', 'Sucursal eliminado exitosamente');
+                ->with('success', 'Cargo eliminado exitosamente');
         } else {
             return redirect()->route('workPositions.index')
-                ->with('error', 'Sucursal no encontrada');
+                ->with('error', 'Cargo no encontrado');
         }
     }
 

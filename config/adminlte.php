@@ -261,7 +261,7 @@ return [
             'can' => 'cruds',
         ],
         [
-            'text' => 'Sucursales',
+            'text' => 'Cargos',
             'url'  => 'workPositions',
             'icon' => 'fas fa-fw fa-users',
             'can' => 'cruds',

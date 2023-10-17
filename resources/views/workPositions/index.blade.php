@@ -3,7 +3,7 @@
 @section('title', 'Inicio')
 
 @section('content_header')
-    <h2>Lista de sucursales</h2>
+    <h2>Lista de Cargos de la empresa</h2>
 @stop
 
 @section('content')
@@ -15,7 +15,7 @@
             </div>
         @endif
 
-        <a href="{{ route('workPositions.create') }}" class="btn btn-primary my-3">Registrar Sucursal</a>
+        <a href="{{ route('workPositions.create') }}" class="btn btn-primary my-3">Registrar Cargo</a>
 
         <div class="card">
             <div class="card-body table-responsive">
