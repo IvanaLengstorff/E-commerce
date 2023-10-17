@@ -3,12 +3,10 @@
 @section('title', 'Inicio')
 
 @section('content_header')
-    <h1>Inicio</h1>
 @stop
 
 @section('content')
-    <p>Bienvenido a VirtualStyle</p>
-    <h1>ivana</h1>
+    <p>Bienvenido a ShopStyle</p>
     <!DOCTYPE html>
 <html>
 <head>
