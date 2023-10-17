@@ -18,9 +18,14 @@ return new class extends Migration
             $table->string('phone');
             $table->string('document_number');
             $table->date('birthday');
-            $table->string('ocupation');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('ocupation')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
+            $table->unsignedBigInteger('branch_id')->nullable();
+            $table->foreign('branch_id')->references('id')->on('branches')->onDelete('set null')->onUpdate('cascade');
+            $table->unsignedBigInteger('work_position_id')->nullable();
+            $table->foreign('work_position_id')->references('id')->on('work_positions')->onDelete('set null')->onUpdate('cascade');
+            
             $table->timestamps();
         });
     }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->date('date');
             $table->string('subtotal');
             $table->string('total');
-            $table->string('type_transaction');
+            $table->boolean('type_transaction')->default(0);
             $table->string('payment_method');
             $table->unsignedBigInteger('brand_id');
             $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade')->onUpdate('cascade');

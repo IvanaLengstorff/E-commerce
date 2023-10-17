@@ -249,23 +249,18 @@ return [
         ['header' => 'GESTION'],
         [
             'text' => 'Usuarios',
-            'url'  => 'admin/settings',
+            'url'  => 'users',
             'icon' => 'fas fa-fw fa-users',
             'can' => 'cruds',
-
         ],
+        
         [
             'text' => 'Marcas',
             'url'  => 'brands',
             'icon' => 'fas fa-fw fa-users',
             'can' => 'cruds',
         ],
-        [
-            'text' => 'Cargos',
-            'url'  => 'workPositions',
-            'icon' => 'fas fa-fw fa-users',
-            'can' => 'cruds',
-        ],
+        
         [
             'text' => 'Metodos de Pago',
             'url'  => 'paymentMethods',
@@ -273,81 +268,46 @@ return [
             'can' => 'cruds',
         ],
         [
-            'text'    => 'Compras',
+            'text'    => 'Gestion de negocio',
             'icon'    => 'fas fa-fw fa-share',
             'can' => 'cruds',
-
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Empleados',
+                    'url'  => 'employees',
+                    'icon' => 'fas fa-fw fa-users',
+                    'can' => 'cruds',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Cargos',
+                    'url'  => 'workPositions',
+                    'icon' => 'fas fa-fw fa-users',
+                    'can' => 'cruds',
                 ],
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Sucursales',
+                    'url'  => 'branches',
+                    'icon' => 'fas fa-fw fa-users',
+                    'can' => 'cruds',
                 ],
             ],
         ],
         [
-            'text'    => 'Ventas',
+            'text'    => 'Transacciones',
             'icon'    => 'fas fa-fw fa-share',
             'can' => 'venta',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Ventas',
+                    'url'  => 'sells',
+                    'icon' => 'fas fa-fw fa-users',
+                    'can' => 'cruds',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Compras',
+                    'url'  => 'purchases',
+                    'icon' => 'fas fa-fw fa-users',
+                    'can' => 'cruds',
                 ],
             ],
         ],
